@@ -21,13 +21,19 @@ button:focus {
 /* ------- MAIN GRID CONTAINER SECTION --------- */
 #page-grid-container{
     border: 1px solid black;
-    width: 70%;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2.5rem auto 2.5rem;
-    grid-template-rows: 208px 1.25rem 1.25rem 2rem minmax(550px, auto);
+    grid-template-rows: minmax(140px,208px) 1.25rem 1.25rem 2rem minmax(550px, auto);
 }
 
+@media screen and (max-width: 730px){
+   :root{
+        font-size: 2.5vw;
+    }
+}
 /* ----- HEADER SECTION ------ */
 header{
     display: flex;
@@ -226,6 +232,7 @@ header a:hover{
     color: white;
     cursor: pointer;
     transition: all 0.5s ease;
+    font-size: 0.83rem;
 }
 .individual-movie-data-middle button:hover{
     background-color: rgba(211, 211, 211, 0.596);
@@ -253,6 +260,7 @@ header a:hover{
     background: none;
     color: rgb(197, 193, 193);
     cursor: pointer;
+    font-size: 0.83rem;
 }
 
 /* INVALID SEARCH ===== */

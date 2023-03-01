@@ -11,12 +11,18 @@ body{
 /* ==== MAIN GRID SECTION ======= */
 #page-grid-container{
     border: 1px solid black;
-    width: 70%;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2.5rem auto 2.5rem;
-    grid-template-rows: 208px minmax(550px, auto);
+    grid-template-rows: minmax(140px,208px) minmax(550px, auto);
 }
+@media screen and (max-width: 730px){
+    :root{
+         font-size: 2.5vw;
+     }
+ }
 /* ============ HEADER SECTION ============== */
 header {
     display: flex;
@@ -125,7 +131,7 @@ header a:hover{
     gap: 1rem;
     border-bottom: 2px solid #2C2C2C;
     padding-bottom: 1em;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -137,6 +143,7 @@ header a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     gap: 0.7em;
 }
 .individual-movie-data-title{
@@ -174,6 +181,7 @@ header a:hover{
     color: white;
     cursor: pointer;
     transition: all 0.5s ease;
+    font-size: 0.83rem;
 }
 .individual-movie-data-middle button:hover{
     background-color: rgba(211, 211, 211, 0.596);
@@ -200,9 +208,6 @@ header a:hover{
     border: none;
     background: none;
     color: rgb(197, 193, 193);
+    font-size: 0.83rem;
 }
 
-
-img{
-    width: 300px;
-}
