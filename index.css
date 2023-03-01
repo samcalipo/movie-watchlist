@@ -95,7 +95,7 @@ header a:hover{
     padding: 0.45em 0 0.4em 0.6em ;
 }
 #search-box{
-    font-size: 0.93rem;
+    font-size: 1.2rem;
     width: 75%;
     border:none;
     background: #333232;
@@ -108,12 +108,12 @@ header a:hover{
 #search-box::placeholder{
 
     color: #A5A5A5;
-    font-size: 0.93rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
 #search-btn{
-    
+    font-size: 1rem;
     border-radius: 0 6px 6px 0;
     width: 25%;
     border:none;
@@ -125,7 +125,7 @@ header a:hover{
 #search-btn:hover{
     background-color: #3f3f3f;
     
-    font-size: 0.9rem;  
+    font-size: 1.2rem;  
 }
 
 
