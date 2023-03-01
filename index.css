@@ -95,6 +95,7 @@ header a:hover{
     padding: 0.45em 0 0.4em 0.6em ;
 }
 #search-box{
+    font-size: 0.875rem;
     width: 75%;
     border:none;
     background: #333232;
