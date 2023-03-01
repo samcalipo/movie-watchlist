@@ -11,11 +11,11 @@ body{
 /* ==== MAIN GRID SECTION ======= */
 #page-grid-container{
     border: 1px solid black;
-    width: 550px;
+    width: 70%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2.5rem auto 2.5rem;
-    grid-template-rows: 208px 550px;
+    grid-template-rows: 208px minmax(550px, auto);
 }
 /* ============ HEADER SECTION ============== */
 header {
