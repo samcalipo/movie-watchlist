@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- link css to this html document -->
+        <link rel="stylesheet" href="index.css">
+
+        <!-- Font Awesome 4 icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Inter font (google fonts) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main id="page-grid-container">
+            <!-- HEADER section -->
+            <header>
+                <h1>Find your film</h1>
+                <a href="watchlist.html" target="_self">My Watchlist</a> <!-- link to watchlist page-->
+            </header>
+            <img src="images/headerBg2.png" id="header-bg-img"> <!-- header section BACKGROUND IMAGE-->
+
+            <!-- SEARCH section -->
+            <section id="search-section">
+                <div>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                
+                <input 
+                    type="text"
+                    id="search-box"
+                    placeholder="Search for a movie">
+                <button type="button" id="search-btn">Search</button> 
+            </section>
+
+            
+            <!-- line 40 - 106 to be REPLACED WITH ACTIVE STATE e.g "searched results" OR
+            "No movies found" OR "nothing searched"
+            -->
+            
+            <!-- ===== MOVIE SEARCHED SECTION ==== -->
+                <!-- before entering a movie -->
+            <section id="no-movie-searched">
+                <div>
+                    <i class="fa fa-film" aria-hidden="true"></i>
+                    <p>Start exploring</p>
+                </div>
+            </section>
+            
+            <!-- when movie name is valid -->
+            <section id="movie-search-result">
+                <!-- individual movies 1 -->
+                
+
+                
+            </section>
+
+            <!-- Movie name was invalid (no results found) -->
+            <section id="movie-search-invalid">
+                <p>Unable to find what you're looking for. Please try another search.</p>
+            </section>
+        
+        </main>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
+
+<!-- grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>; -->
