@@ -51,16 +51,15 @@ function addMovieToWatchlist(movieId){
     
     
 }
-function sendToApi(userSearch){
+async function sendToApi(userSearch){
     // first: replace empty space with "+" for url, & make string lowercase
     let formattedUserSearch = userSearch.replace(/ /g, "+").toLowerCase();
-    console.log(formattedUserSearch)
+    
 
 
-    fetch(`https://www.omdbapi.com/?s=${formattedUserSearch}&type=movie&apikey=88bd33bd`)
+    await fetch(`https://www.omdbapi.com/?s=${formattedUserSearch}&type=movie&apikey=88bd33bd`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             if(data.Error){
                 searchInvalid.style.display = "flex";
                 document.getElementById("movie-search-result").style.display = "none"
@@ -76,14 +75,14 @@ function sendToApi(userSearch){
             
         })
 }
-async function renderMovieResults(moviesSearchedArray){
+function renderMovieResults(moviesSearchedArray){
     let returnMoviesSearchedHtml = "";
 
     // add a variable to track if a movie has been selected to add to watchlist.
     moviesSearchedArray.map(movie => {
         movie.isAddedToWatchlist = false;
 
-        fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&type=movie&apikey=88bd33bd`)
+         fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&type=movie&apikey=88bd33bd`)
             .then(res => res.json())
             .then(data => {
                 let plotHtml = ""
@@ -136,7 +135,6 @@ async function renderMovieResults(moviesSearchedArray){
         
     })
     SearchedMovieArray = moviesSearchedArray;
-    console.log(returnMoviesSearchedHtml);
 
     movieSearchResult.innerHTML = returnMoviesSearchedHtml;
 }

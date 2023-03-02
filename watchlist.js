@@ -13,12 +13,14 @@ document.addEventListener('click', e =>{
 function removeMovieFromWatchlist(movieId){
     // find index of object in the array
    let index = moviesFromLocalStorage.findIndex(movie => movie.imdbID == movieId) 
-
-   moviesFromLocalStorage.splice(index, 1);
+   setTimeout(() => {
+    moviesFromLocalStorage.splice(index, 1);
     // update local storage
     localStorage.setItem("movies", JSON.stringify(moviesFromLocalStorage));    
    renderWatchlist();
 
+   }, 350);
+   
 }
 function renderWatchlist(){
     
@@ -67,7 +69,7 @@ function renderWatchlist(){
         })
         watchlistContainer.innerHTML = watchlistMovieHtml;
     } else {
-        console.log("display no movies in watchlist")
+        
         moviesInWatchlist.style.display = "none";
         noMovieInWatchlist.style.display = "flex";
     }

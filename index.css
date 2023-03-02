@@ -29,11 +29,7 @@ button:focus {
     grid-template-rows: minmax(140px,208px) 1.25rem 1.25rem 2rem minmax(550px, auto);
 }
 
-@media screen and (max-width: 730px){
-   :root{
-        font-size: 2.5vw;
-    }
-}
+
 /* ----- HEADER SECTION ------ */
 header{
     display: flex;
@@ -281,3 +277,14 @@ header a:hover{
 #movie-search-invalid p{
     width: 70%;
 }
+
+@media screen and (max-width: 730px){
+    :root{
+         font-size: 2.5vw;
+     }
+     
+     .individual-movie > img{
+        width: 15%;
+        height: 100%;
+     }
+ }
