@@ -1,5 +1,6 @@
 # Movie Search Web App
 [Click here to view the site](https://sams-movie-watchlist-maker.netlify.app)
+
 This is a web application that allows users to search for movies and add them to their watchlist. It uses the OMDB API to fetch movie data based on user input.
 
 ## Features
